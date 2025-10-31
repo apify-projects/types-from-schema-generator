@@ -1,0 +1,17 @@
+{
+  "extends": "@apify/tsconfig",
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "esnext",
+    "moduleResolution": "nodenext",
+    "outDir": "dist",
+    "strict": true,
+    "noUnusedLocals": false,
+    "skipLibCheck": true,
+    "allowArbitraryExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "lib": ["ESNext"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}

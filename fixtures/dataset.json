@@ -1,0 +1,148 @@
+{
+    "$schema": "https://apify.com/schemas/v1/dataset.json",
+    "title": "Sample dataset",
+    "actorSpecification": 1,
+    "description": "This is a sample dataset",
+    "fields": {
+        "type": "object",
+        "required": ["name", "username", "password", "emails", "phoneNumber", "location", "job", "uuid", "objectId"],
+        "properties": {
+            "name": {
+                "type": "object",
+                "properties": {
+                    "first": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "middle": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "last": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["first", "last"]
+            },
+            "username": {
+                "type": "string",
+                "minLength": 1
+            },
+            "password": {
+                "type": "string",
+                "minLength": 1
+            },
+            "emails": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "phoneNumber": {
+                "type": "string",
+                "minLength": 1
+            },
+            "location": {
+                "type": "object",
+                "properties": {
+                    "street": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "city": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "state": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "country": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "zip": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "coordinates": {
+                        "type": "object",
+                        "properties": {
+                            "latitude": {
+                                "type": "number"
+                            },
+                            "longitude": {
+                                "type": "number"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["latitude", "longitude"]
+                    }
+                },
+                "required": ["street", "city", "state", "country", "zip"]
+            },
+            "website": {
+                "type": "string",
+                "minLength": 1
+            },
+            "domain": {
+                "type": "string",
+                "minLength": 1
+            },
+            "job": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "descriptor": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "area": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "type": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "company": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "required": ["title", "descriptor", "area", "type", "company"]
+            },
+            "creditCard": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "cvv": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "issuer": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "required": ["number", "cvv", "issuer"]
+            },
+            "uuid": {
+                "type": "string",
+                "minLength": 1
+            },
+            "objectId": {
+                "type": "string",
+                "minLength": 1
+            }
+        }
+    }
+}
